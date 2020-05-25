@@ -3,53 +3,62 @@
 <head>
   <title>VingerVissen</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <header>
 </header>
   <ul class="navigatiebalk">
-    <li class="navigatie-2"><img src="Logo_VingerVissen.png" style="height: 70px" alt="logo"></li>
+    <li class="navigatie-2"><img src="Logo_VingerVissen.png" style="height: 70px; max-width: 100%" alt="logo"></li>
     <li class="navigatie-3">VingerVissen</li>
-    <li class="navigatie"><a href="#home" onclick="WzwFunction()" id="WzwBtn">INFO</a></li>
-    <li class="navigatie" ><a href="#watdoenwe" onclick="WdwFunction()" id="WdwBtn">ABOUT</a></li>
-    <li class="navigatie"><a href="#contact" onclick="topFunction()" id="HomeBtn">HOME</a></li>
+    <li class="navigatie"><a href="#info" onclick="WzwFunction()" id="WzwBtn">INFO</a></li>
+    <li class="navigatie" ><a href="#about" onclick="WdwFunction()" id="WdwBtn">ABOUT</a></li>
+    <li class="navigatie"><a href="#home" onclick="topFunction()" id="HomeBtn">HOME</a></li>
   </ul>
   <div class="container">
     <img src="Achtergrond---Home2.png" alt="achtergrond" class="bg">
   </div>
   <div class="container">
     <img src="About---Achtergrond.png" alt="Blauwe achtergrond" class="bg">
-    <div class="centered-left-2"><img src="JanJambon.jpg" alt="Jan Jambon" class=""></div>
-    <div class="centered-right-2"><img src="Vingerafdruk.png" style="height: 500px" alt="Vingerafdruk" class=""></div>
+    <img src="JanJambon.jpg" alt="Jan Jambon" class="aboutFoto">
     <div class="centered-2">ABOUT</div>
-    <div class="centered-bottom-2">Jan Jambon (links) had een tijd geleden het voorstel gedaan om een vingerafdruk op de identiteitskaart te laten zetten om zo criminaliteit beter te kunnen bestrijden. Hij ziet hier niet het probleem van in, wij zouden graag een beetje meer informatie over de risico's/gevolgen dit voorstel met zich mee kan brengen moest het realiteit worden.</div>
+    <div class="centered-bottom-2">Jan Jambon had een tijd geleden het voorstel gedaan om een vingerafdruk op de identiteitskaart te laten zetten om zo criminaliteit beter te kunnen bestrijden. Hij ziet hier niet het probleem van in, wij zouden graag een beetje meer informatie over de risico's/gevolgen dit voorstel met zich mee kan brengen moest het realiteit worden.</div>
   </div>
   <div class="container">
-    <img src="Achtergrond - Grijs.jpg" alt="achtergrond3" class="bg">
+    <img src="Achtergrond - Grijs.jpg" alt="achtergrond3" class="bg-2">
     <div class="centered-3">INFO</div>
     <img src="Identity-Fraud.png" alt="Identiteitsfraude" class="wdwFoto">
     <img src="Database.png" alt="Identiteitsfraude" class="wdwFoto-2">
     <img src="Privacy.png" alt="Identiteitsfraude" class="wdwFoto-3">
   </div>
+  <div style="text-align: center" class="infoVideo">
+    <video width="75%" height="75%" controls>
+      <source src="Info.mp4" type="video/mp4" class="infoVideo">
+    </video>
+  </div>
   <script>
   var Wdwbutton = document.getElementById("WdwBtn");
   var homebutton = document.getElementById("HomeBtn");
   var Wzwbutton = document.getElementById("WzwBtn");
+  var width = window.innerWidth;
 
-  function topFunction() {
-    document.body.scrollTop = 150;
-    document.documentElement.scrollTop = 150;
+  if (width > 0) {
+    function topFunction() {
+      document.body.scrollTop = 150;
+      document.documentElement.scrollTop = 150;
+    }
+
+    function WdwFunction() {
+      document.body.scrollTop = 1100;
+      document.documentElement.scrollTop = 1100;
+    }
+
+    function WzwFunction(){
+      document.body.scrollTop = 2150;
+      document.documentElement.scrollTop = 2150;
+    }
   }
 
-  function WdwFunction() {
-    document.body.scrollTop = 1100;
-    document.documentElement.scrollTop = 1100;
-  }
-
-  function WzwFunction(){
-    document.body.scrollTop = 2600;
-    document.documentElement.scrollTop = 2600;
-  }
 
 
   </script>
