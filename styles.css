@@ -3,21 +3,20 @@ body, html{
 }
 
 .bg{
-  height: 100%;
+  height: auto;
   background-position: center;
   backround-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  max-width: 100%;
+
 }
 
 .bg-2{
-  height: 100%;
+  height: auto;
   background-position: center;
-  background-repeat: no-repeat;
+  backround-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  opacity: 0.2;
-  z-index: 1;
+  max-width: 100%;
 }
 
 .navigatiebalk{
@@ -29,6 +28,8 @@ body, html{
   top: 0;
   z-index: 1;
   padding: 0% 1%;
+  width: 100%;
+  height: auto;
 }
 
 .navigatie{
@@ -60,12 +61,7 @@ body, html{
   font-family: "DejaVu Sans Mono", monospace;
 }
 
-.navigatie a:hover:not(.active){
-  /*border-style:solid;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom-color: #1e90ff;*/
+.navigatie a:hover{
   transition-duration: 1s;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Fingerprint_picture.svg/707px-Fingerprint_picture.svg.png);
   -webkit-background-size: cover;
@@ -74,19 +70,12 @@ body, html{
    background-size: 25% 100%;
 }
 
-.active{
-  border-style:solid;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom-color: #1e90ff;
-
-}
-
 .container{
   position: relative;
   text-align: center;
   color: #ebebeb;
+  height: auto;
+  max-width: 100%;
 }
 
 .centered{
@@ -134,16 +123,18 @@ body, html{
   left: 50%;
   transform: translate(-50%,-50%);
   color: black;
-  font-size: 25px;
+  font-size: 35px;
   font-family: "Optima", sans-serif;
 }
 
-.centered-left-2{
+.aboutFoto{
   float: left;
   position:absolute;
-  top: 25%;
-  left: 15%;
-  transform: translate(-50%, 50%);
+  top: 30%;
+  left: 5%;
+  width: 15%;
+  max-width: 100%;
+  height: auto;
 }
 
 .centered-right-2{
@@ -156,7 +147,7 @@ body, html{
 
 .centered-3{
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
@@ -165,35 +156,14 @@ body, html{
   font-weight: bold;
 }
 
-.centered-bottom-3{
-  position:absolute;
-  top: 61%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color: black;
-  font-size: 25px;
-  font-family: "OCR A Std", monospace;
-}
-
-#myBtn{
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-}
-
 .wdwFoto{
   position: absolute;
   width: 25%;
-  height: 60%;
-  top: 25%;
+  height: auto;
+  top: 10%;
   left: 5%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
 }
 
 .wdwFoto:hover{
@@ -203,10 +173,11 @@ body, html{
 .wdwFoto-2{
   position: absolute;
   width: 25%;
-  height: 60%;
-  top: 25%;
+  height: auto;
+  top: 10%;
   left: 37.5%;
   box-shadow: 0 0 5px rgba(0,0,0,0.25);
+  max-width: 100%;
 }
 
 .wdwFoto-2:hover{
@@ -216,14 +187,19 @@ body, html{
 .wdwFoto-3{
   position: absolute;
   width: 25%;
-  height: 60%;
-  top: 25%;
+  height: auto;
+  top: 10%;
   left: 70%;
   box-shadow: 0 0 5px rgba(0,0,0,0.25);
+  max-width: 100%;
 }
 
 .wdwFoto-3:hover{
   box-shadow: 0 0 25px rgba(0,0,0,0.25);
+}
+
+.infoVideo{
+  margin-top: 0%;
 }
 
 #WdwBtn{
@@ -236,4 +212,216 @@ body, html{
 
 #WzwBtn{
   cursor: pointer;
+}
+
+@media screen and (max-width: 1700px){
+  .infoVideo{
+    top: 0%;
+  }
+}
+@media screen and (max-width: 1400px){
+  .wdwFoto{
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+  }
+
+  .wdwFoto-2{
+    position: absolute;
+    width: 50%;
+    top: 150%;
+    left: 25%;
+  }
+
+  .wdwFoto-3{
+    position: absolute;
+    width: 50%;
+    top: 275%;
+    left: 25%;
+  }
+
+  .infoVideo{
+    margin-top: 165%;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .infoVideo{
+    margin-top: 165%;
+  }
+}
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 1100px){
+  .centered-bottom-2{
+    font-size: 32px;
+  }
+
+
+}
+
+@media screen and (max-width: 1000px) {
+  .centered-bottom-2{
+    font-size: 29px;
+  }
+
+  .centered-2, .centered-3{
+    font-size: 40px;
+  }
+
+  .navigatie{
+    width: 100%;
+  }
+
+  .navigatie a{
+    padding: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cc5843;
+  }
+
+  .navigatie-2{
+  }
+
+  .navigatie-3{
+    width: 100%;
+    padding: 0px;
+  }
+
+  .navigatie a:hover{
+     background-size: 10% 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 900px){
+  .centered-bottom-2{
+    font-size: 26px;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+
+  .centered-bottom-2{
+    font-size: 20px;
+  }
+
+
+
+}
+
+@media screen and (max-width: 700px){
+  .wdwFoto{
+    position: absolute;
+    width: 75%;
+    top: 25%;
+    left: 12.5%;
+  }
+
+  .wdwFoto-2{
+    position: absolute;
+    width: 75%;
+    top: 200%;
+    left: 12.5%;
+  }
+
+  .wdwFoto-3{
+    position: absolute;
+    width: 75%;
+    top: 375%;
+    left: 12.5%;
+  }
+
+  .infoVideo{
+    margin-top: 255%;
+  }
+  .centered-bottom-2{
+    font-size: 17px;
+  }
+
+
+}
+
+@media screen and (max-width: 650px){
+
+
+}
+@media screen and (max-width: 600px){
+  .centered-bottom-2{
+    font-size: 16px;
+  }
+
+  .centered-2{
+    font-size: 32px;
+  }
+
+
+}
+
+@media screen and (max-width: 550px){
+
+}
+
+@media screen and (max-width: 500px){
+  .wdwFoto{
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    left: 0%;
+  }
+
+  .wdwFoto-2{
+    position: absolute;
+    width: 100%;
+    top: 260%;
+    left: 0%;
+  }
+
+  .wdwFoto-3{
+    position: absolute;
+    width: 100%;
+    top: 495%;
+    left: 0%;
+  }
+
+  .centered-bottom-2{
+    font-size: 12px;
+  }
+
+  .centered-2{
+    font-size: 25px;
+  }
+
+  .infoVideo{
+    margin-top: 360%;
+    width: 100%;
+  }
+
+  .infoVideo video{
+    width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 450px){
+
+}
+
+@media screen and (max-width: 400px){
+  .centered-bottom-2{
+    font-size: 11px;
+  }
+
+  .centered-2{
+    font-size: 15px;
+  }
+
+
 }
